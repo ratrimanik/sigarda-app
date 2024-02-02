@@ -10,7 +10,7 @@ const Icon = (props) => {
 
     return(
         <div className="flex items-center text-sm">
-            <div className="pr-2 sm:pl-8">{icon}</div>
+            <div className="pr-2 sm:pl-8 ">{icon}</div>
             <div className="pr-12 text-black font-semibold">{title}</div>
         </div>
     );

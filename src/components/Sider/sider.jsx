@@ -11,7 +11,7 @@ import Button from "../Button/button";
 
 const Sider = () => {
   return (
-    <div className="w-64 pl-4">
+    <div className="w-64 pl-12">
       <div className="relative mt-16">
         <input
           type="text"

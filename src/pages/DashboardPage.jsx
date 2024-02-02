@@ -2,6 +2,7 @@ import AskLabel from "../components/AskLabel/askLabel";
 import Button from "../components/Button/button";
 import ButtonHandlerFollow from "../components/Button/handlerfollow";
 import CardPost from "../components/CardPost/cardpost";
+import { dummyCard } from "../components/CardPost/datacard";
 import SideBar from "../components/Sidebar/sidebar";
 // import { AiFillPlusCircle } from "react-icons/ai";
 import Sider from "../components/Sider/sider";
@@ -13,7 +14,7 @@ const Dashboard = () => {
         <div className="sticky top-0 left-0 z-40 w-64 h-screen">
           <SideBar />
         </div>
-        <div className="px-4 pt-6">
+        <div className=" pt-6">
           <h1 className="text-xl font-bold text-primary">Beranda</h1>
           <div className="flex">
             <div className="flex pt-4 gap-2">
@@ -26,21 +27,22 @@ const Dashboard = () => {
                   <p className="text-primary px-2 text-xs">Tambahkan</p>
                 </Button>
               </div>
-            </div> 
+            </div>
           </div>
 
           <hr className="border border-[#C1DFF5] my-4" />
 
-          <div className="">
+          <div>
             <AskLabel />
-            <CardPost />
+            {dummyCard.map((cardData, index) => (
+              <CardPost key={index} data={cardData} />
+            ))}
           </div>
         </div>
 
         <div className="">
           <Sider />
         </div>
-
       </div>
     </div>
   );

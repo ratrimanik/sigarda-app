@@ -5,7 +5,7 @@ import Icon from "./icon";
 
 const AskLabel = () => {
   return (
-    <div className="bg-white h-24 mb-4 max-w-3xl px-4 md:max-w-xl rounded-lg shadow-md">
+    <div className="bg-white h-24 mb-4 px-4 md:max-w-2xl rounded-lg shadow-md">
       <div className="flex items-center pt-3">
         <BsFillPCircleFill className="text-3xl text-[#E92A2A] " />
         <input
@@ -17,7 +17,7 @@ const AskLabel = () => {
 
       <hr className="my-2"></hr>
 
-      <div className="flex gap-8 ml-4 text-bold">
+      <div className="flex gap-12 ml-4 text-bold">
         <Icon
           icon={<BsFillQuestionCircleFill className="text-primary" />}
           title="Tambah Pertanyaan"
