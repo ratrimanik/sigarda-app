@@ -7,7 +7,7 @@ import SidebarMenu from "./sidebarMenu";
 const SideBar = () => {
   return (
     <Sidebar
-      className="bg-white dark:bg-gray-800 shadow-lg fixed top-0 left-0 w-60 h-screen z-40"
+      className="bg-white dark:bg-gray-800 shadow-lg fixed top-0 left-0 w-56 h-screen z-40"
       aria-label="Sidebar with logo branding example"
     >
       <div className="pl-4">

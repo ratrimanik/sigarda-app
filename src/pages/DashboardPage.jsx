@@ -13,7 +13,7 @@ const Dashboard = () => {
         <div className="sticky top-0 left-0 z-40 w-64 h-screen">
           <SideBar />
         </div>
-        <div className="px-8 pt-6">
+        <div className="px-4 pt-6">
           <h1 className="text-xl font-bold text-primary">Beranda</h1>
           <div className="flex">
             <div className="flex pt-4 gap-2">

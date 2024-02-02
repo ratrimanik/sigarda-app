@@ -5,12 +5,12 @@ import Icon from "./icon";
 
 const AskLabel = () => {
   return (
-    <div className="bg-white h-24 mb-4 max-w-md px-4 md:max-w-xl rounded-lg shadow-md">
+    <div className="bg-white h-24 mb-4 max-w-3xl px-4 md:max-w-xl rounded-lg shadow-md">
       <div className="flex items-center pt-3">
         <BsFillPCircleFill className="text-3xl text-[#E92A2A] " />
         <input
           type="text"
-          className="w-[700px] bg-gray-200 h-8 ml-2 text-sm rounded-full border-gray-200 focus:outline-none text-black"
+          className="w-full bg-gray-200 h-8 ml-2 text-sm rounded-full border-gray-200 focus:outline-none text-black"
           placeholder="Apa yang ingin anda tanyakan atau bagikan"
         ></input>
       </div>

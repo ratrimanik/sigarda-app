@@ -1,138 +1,59 @@
-import { IoCloseSharp } from "react-icons/io5";
-import { TbArrowBigUp } from "react-icons/tb";
-import { TbArrowBigDown } from "react-icons/tb";
-import { FaRegComment } from "react-icons/fa6";
-import { TfiReload } from "react-icons/tfi";
-import Button from "../Button/button";
-
+/* eslint-disable react/no-unescaped-entities */
 const CardPost = () => {
-    return (
-        <div>
-          <div className="flex bg-white  mb-8 max-w-md md:max-w-xl border">
-            <div className="flex items-start px-4 py-4">
-              <img
-                className="w-10 h-10 rounded-full object-cover  mr-2 shadow"
-                src="https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-                alt="avatar"
-              />
-              <div className="">
-                <div className="flex items-center justify-between">
-                  <div className="text-sm">
-                    <a href="" className="font-semibold">
-                      Matin Rajab
-                    </a>
-                    <span className="mx-1">·</span>
-                    <a href="" className="text-blue-600">
-                      Ikuti
-                    </a>
-                  </div>
-                  <p className="text-lg text-gray-700">
-                    <IoCloseSharp />
-                  </p>
-                </div>
-                <div className="text-sm text-gray-700">
-                  <a href="">Belajar di MIPA SMANSA (Lulus 2022)</a>
-                  <span className="mx-1">·</span>
-                  <a href=""> 3thn</a>
-                </div>
-                <p className="font-bold mt-2">Ini Berisi Judul Artikel</p>
-                <p className=" text-gray-700 text-sm">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque
-                  esse, nisi dolor maxime pariatur aperiam labore cupiditate quo
-                  voluptatem tempore fugiat. Atque accusamus nulla necessitatibus
-                  quas suscipit incidunt culpa perspiciatis.
-                </p>
-                <img src="image/banjir.jpg" className="pt-2"></img>
-                <div className="mt-4 flex items-center text-xl gap-4">
-                  <div className="divide-x border rounded-full">
-                    <div>
-                      <Button color="bg-gray-100" className="flex">
-                        <a href="" className="flex my-1">
-                          <TbArrowBigUp className="text-blue-600" />
-                          <div className="flex text-sm text-black ml-2">
-                            <p className="">Dukung Naik</p>
-                            <span className="mx-1">·</span>
-                            <p className="">18,4k</p>
-                          </div>
-                          <TbArrowBigDown className="ml-2 text-black" />
-                        </a>
-                      </Button>
-                    </div>
-                  </div>
-                  <div>
-                    <FaRegComment />
-                  </div>
-                  <div>
-                    <TfiReload />
-                  </div>
-                </div>
-              </div>
+  return (
+    <div className="bg-white h-full mb-4 max-w-md px-4 md:max-w-xl rounded-lg shadow-md">
+      <div className="py-4">
+        <div className="flex">
+          <img src="src/assets/img/profile2.png" alt="" className="w-8" />
+          <div className="flex flex-col ml-2">
+            <div className="flex items-center">
+              <p className="text-xs font-bold">Firah Azis</p>
+              <p className="text-xs text-primary font-bold ml-2">Ikuti</p>
             </div>
+            <p className="text-[10px] text-gray-300">
+              Professional Babu Kucing Sejak 20 Tahun yang lalu
+            </p>
           </div>
-          <div className="flex bg-white mb-16 max-w-md md:max-w-xl border">
-            <div className="flex items-start px-4 py-4">
-              <img
-                className="w-10 h-10 rounded-full object-cover  mr-2 shadow"
-                src="https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-                alt="avatar"
-              />
-              <div className="">
-                <div className="flex items-center justify-between">
-                  <div className="text-sm">
-                    <a href="" className="font-semibold">
-                      Matin Rajab
-                    </a>
-                    <span className="mx-1">·</span>
-                    <a href="" className="text-blue-600">
-                      Ikuti
-                    </a>
-                  </div>
-                  <p className="text-lg text-gray-700">
-                    <IoCloseSharp />
-                  </p>
-                </div>
-                <div className="text-sm text-gray-700">
-                  <a href="">Belajar di MIPA SMANSA (Lulus 2022)</a>
-                  <span className="mx-1">·</span>
-                  <a href=""> 3thn</a>
-                </div>
-                <p className="font-bold mt-2">Ini Berisi Judul Artikel</p>
-                <p className=" text-gray-700 text-sm">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque
-                  esse, nisi dolor maxime pariatur aperiam labore cupiditate quo
-                  voluptatem tempore fugiat. Atque accusamus nulla necessitatibus
-                  quas suscipit incidunt culpa perspiciatis.
-                </p>
-                <img src="image/banjir.jpg" className="pt-2"></img>
-                <div className="mt-4 flex items-center text-xl gap-4">
-                  <div className="divide-x border rounded-full">
-                    <div>
-                      <Button color="bg-gray-100" className="flex">
-                        <a href="" className="flex my-1">
-                          <TbArrowBigUp className="text-blue-600" />
-                          <div className="flex text-sm text-black ml-2">
-                            <p className="">Dukung Naik</p>
-                            <span className="mx-1">·</span>
-                            <p className="">18,4k</p>
-                          </div>
-                          <TbArrowBigDown className="ml-2 text-black" />
-                        </a>
-                      </Button>
-                    </div>
-                  </div>
-                  <div>
-                    <FaRegComment />
-                  </div>
-                  <div>
-                    <TfiReload />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
         </div>
-      );
-}
+        <div className="border border-gray-300 h-full mb-4 max-w-md px-4 md:max-w-xl rounded-lg shadow-md mt-2">
+          <p className="font-bold text-xs py-2">
+            Bolehkah saya jawab "100 juta perbulan" jika ditanya gaji yang
+            diharapkan saat interview?
+          </p>
+        </div>
+        <div className="flex">
+          <div className="text-xs pl-4">
+            <p className="mb-4">Saya jadi pengen jawab.</p>
+            <div>
+              Sekitar 5-6 tahun lalu, saya diajak ngobrol oleh seorang teman,
+              saat itu teman saya membawa rekannya. Bule, umurnya sekitar late
+              40 atau early 50 lah. Teman saya itu memperkenalkan bule itu
+              sebagai rekan kerjanya yg baru. Suasana lounge saat itu berisik,
+              Tapi tidak hingar bingar. Masih cukup untuk mendengarkan apa yang
+              lawan bicara... Lihat Selengkapnya
+            </div>
+          </div>
+          <img
+            src="src/assets/img/post-image.png"
+            alt=""
+            className="w-full h-auto"
+          />
+        </div>
+        <div className="ml-4 pt-4 flex justify-between">
+          <div className="flex gap-8 w-4 h-4">
+            <img src="src/assets/img/rate-plus.png" alt="" />
+            <img src="src/assets/img/rate-min.png" alt="" />
+            <img src="src/assets/img/comment.png" alt="" />
+            <img src="src/assets/img/share.png" alt="" />
+          </div>
+          <div className="flex w-4 h-4 mr-4">
+            <img src="src/assets/img/preview.png" alt=""/>
+            <img src="src/assets/img/save.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default CardPost;
