@@ -1,7 +1,7 @@
 export const dummyCard = [
     {
         name: 'Firah Azis',
-        status: 'Ikuti',
+        
         job: 'Professional Babu Kucing Sejak 20 Tahun yang lalu',
         date: '11-04-2024 20.59',
         quest: 'Bolehkah saya jawab "100 juta perbulan" jika ditanya gaji yang diharapkan saat interview?',
@@ -9,7 +9,7 @@ export const dummyCard = [
     },
     {
         name: 'Ratri Manik',
-        status: 'Ikuti',
+        
         job: 'Mahasiswa Universitas Karimun',
         date: '11-04-2021 23.08',
         quest: 'Apa yang harus saya perhatikan saat interview?',
@@ -17,7 +17,7 @@ export const dummyCard = [
     },
     {
         name: 'Matin Rajab',
-        status: 'Ikuti',
+        
         job: 'Full Stack Developer',
         date: '11-04-2021 23.08',
         quest: 'Bagaimana pembuatan suatu widget pada pengembangan aplikasi mobile dengan menggunakan flutter?',

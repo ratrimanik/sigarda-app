@@ -41,14 +41,14 @@ const Dashboard = () => {
             {dummyCard.map((cardData, index) => {
               const updatedStatus = isOnFollowPath
                 ? "Mengikuti"
-                : cardData.status;
+                : cardData.isFollowing;
               return (
                 <CardPost
                   key={index}
                   data={{ ...cardData, status: updatedStatus }}
                 />
               );
-            })}
+            })} ini hapus dulu?
           </div>
         </div>
 

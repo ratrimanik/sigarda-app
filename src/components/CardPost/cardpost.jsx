@@ -9,7 +9,7 @@ import IconCard from "./iconcard";
 const CardPost = ({ data }) => {
   const {
     name, 
-    status,
+    isFollowing,
     job,
     date,
     quest,
@@ -26,7 +26,7 @@ const CardPost = ({ data }) => {
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
                   <p className="text-xs font-bold">{name}</p>
-                  <p className="text-xs text-primary font-bold ml-2">{status}</p>
+                  <p className="text-xs text-primary font-bold ml-2"></p>
                 </div>
               </div>
               <div className="text-[10px] text-gray-300 flex">
