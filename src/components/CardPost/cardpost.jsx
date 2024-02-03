@@ -4,6 +4,7 @@
 import { IoIosMore } from "react-icons/io";
 import { MdClose } from "react-icons/md";
 import { dummyCard } from "./datacard";
+import IconCard from "./iconcard";
 
 const CardPost = ({ data }) => {
   const {
@@ -56,18 +57,7 @@ const CardPost = ({ data }) => {
             className="w-full h-auto pl-4 rounded-lg"
           />
         </div>
-        <div className="ml-4 pt-4 flex justify-between">
-          <div className="flex gap-8 w-4 h-4">
-            <img src="src/assets/img/rate-plus.png" alt="" />
-            <img src="src/assets/img/rate-min.png" alt="" />
-            <img src="src/assets/img/comment.png" alt="" />
-            <img src="src/assets/img/share.png" alt="" />
-          </div>
-          <div className="flex w-4 h-4 mr-4">
-            <img src="src/assets/img/preview.png" alt="" />
-            <img src="src/assets/img/save.png" alt="" />
-          </div>
-        </div>
+        <IconCard />
       </div>
     </div>
   );

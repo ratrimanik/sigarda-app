@@ -7,7 +7,7 @@ const ButtonHandlerFollow = () => {
  const [isMengikutiClicked, setIsMengikutiClicked] = useState(false);
 
  return (
-    <div className="flex gap-2">
+    <div className="flex">
       <Button
         color={
           isUntukAndaClicked

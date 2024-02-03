@@ -24,3 +24,4 @@ export const dummyCard = [
         answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ad cumque fugiat saepe tenetur unde sed quibusdam sint deserunt, quasi officiis consectetur atque non ab ducimus fuga vero culpa excepturi.',
     }
 ]
+
