@@ -3,13 +3,12 @@
 /* eslint-disable react/no-unescaped-entities */
 import { IoIosMore } from "react-icons/io";
 import { MdClose } from "react-icons/md";
-import { dummyCard } from "./datacard";
 import IconCard from "./iconcard";
 
 const CardPost = ({ data }) => {
   const {
     name, 
-    isFollowing,
+    status,
     job,
     date,
     quest,
@@ -26,12 +25,13 @@ const CardPost = ({ data }) => {
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
                   <p className="text-xs font-bold">{name}</p>
-                  <p className="text-xs text-primary font-bold ml-2"></p>
+                  <p className="text-xs text-primary font-bold ml-2">{status}</p>
                 </div>
               </div>
               <div className="text-[10px] text-gray-300 flex">
                 <p>{job}</p>
-                <p> • {date}</p>
+                <span className="mx-1">·</span>
+                <p>{date}</p>
               </div>
             </div>
           </div>

@@ -1,7 +1,7 @@
 export const dummyCard = [
     {
         name: 'Firah Azis',
-        
+        status: 'Ikuti',
         job: 'Professional Babu Kucing Sejak 20 Tahun yang lalu',
         date: '11-04-2024 20.59',
         quest: 'Bolehkah saya jawab "100 juta perbulan" jika ditanya gaji yang diharapkan saat interview?',
@@ -9,7 +9,7 @@ export const dummyCard = [
     },
     {
         name: 'Ratri Manik',
-        
+        status: 'Ikuti',
         job: 'Mahasiswa Universitas Karimun',
         date: '11-04-2021 23.08',
         quest: 'Apa yang harus saya perhatikan saat interview?',
@@ -17,11 +17,35 @@ export const dummyCard = [
     },
     {
         name: 'Matin Rajab',
-        
+        status: 'Ikuti',
         job: 'Full Stack Developer',
         date: '11-04-2021 23.08',
         quest: 'Bagaimana pembuatan suatu widget pada pengembangan aplikasi mobile dengan menggunakan flutter?',
         answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ad cumque fugiat saepe tenetur unde sed quibusdam sint deserunt, quasi officiis consectetur atque non ab ducimus fuga vero culpa excepturi.',
-    }
+    },
+    {
+        name: 'Nabil Aziz',
+        status: 'Mengikuti',
+        job: 'Full Stack Developer',
+        date: '11-04-2021 23.08',
+        quest: 'Bagaimana cara membuat aplikasi dengan flutter?',
+        answer: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem blanditiis, hic quasi repellat sapiente iusto voluptate dolore reprehenderit sunt est deleniti quo ut, fugiat, nesciunt accusamus quibusdam? Soluta, quisquam deleniti.',
+    },
+    {
+        name: 'Hafidh Fauzi',
+        status: 'Mengikuti',
+        job: 'Full Stack Developer',
+        date: '11-04-2021 23.08',
+        quest: 'Apa yang harus saya perhatikan saat interview?',
+        answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ducimus architecto nobis laudantium delectus facere iure, non deserunt laboriosam earum recusandae beatae quas consequatur dolorem nemo iste sunt at voluptatum.',
+    },
+    {
+        name: 'Ardhika Fadillah',
+        status: 'Mengikuti',
+        job: 'Full Stack Developer',
+        date: '11-04-2021 23.08',
+        quest: 'Apa yang harus saya perhatikan saat interview?',
+        answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur assumenda quisquam porro, vitae accusamus numquam, rerum cumque architecto maxime odit beatae. Ipsum eveniet repellendus beatae facilis repudiandae neque quibusdam quos?',
+    },
 ]
 

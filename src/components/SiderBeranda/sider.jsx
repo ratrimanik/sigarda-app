@@ -8,17 +8,26 @@ import DropDown from "./dropdown";
 import Header from "./header";
 import Profile from "./profile";
 import Button from "../Button/button";
+import { useLocation } from "react-router-dom";
 
 const Sider = () => {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+  const isFollowPage = location.pathname === "/follow";
+
   return (
     <div className="w-64 pl-12">
       <div className="relative mt-16">
         <input
           type="text"
           className="w-64 pl-12 h-8 bg-white border-white shadow-md text-sm rounded-full focus:outline-none text-black"
-          placeholder="Cari di Sigarda"
+          placeholder={isHomePage || isFollowPage ? "Cari di Sigarda" : "Permintaan"}
         />
-        <IoSearchOutline className="absolute left-6 top-1/2 transform -translate-y-1/2 text-gray-500" />
+        {isHomePage || isFollowPage ? (
+          <IoSearchOutline className="absolute left-6 top-1/2 transform -translate-y-1/2 text-gray-500" />
+        ) : (
+          <Bs2CircleFill className="absolute right-6 top-1/2 transform -translate-y-1/2 text-[#D63230]" />
+        )}
       </div>
 
       <div className="bg-white border-white shadow-md rounded-lg mt-4 w-64">
@@ -57,7 +66,7 @@ const Sider = () => {
       <div className="bg-white border-white shadow-md rounded-lg my-4 w-64">
         <Header
           image="src/assets/img/penulis-terbaik.png"
-          title="Penulis Terbaik"
+          title="Kontributor Terbaik"
         />
 
         <DropDown />

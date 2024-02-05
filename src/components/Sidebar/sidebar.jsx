@@ -29,12 +29,12 @@ const SideBar = () => {
             />
             <SidebarMenu
               image="src/assets/img/tanya.png"
-              href="/"
+              href="/question"
               title="Pertanyaan"
             />
             <SidebarMenu
               image="src/assets/img/forum.png"
-              href="/"
+              href="/forum"
               title="Forum"
             />
             <SidebarMenu

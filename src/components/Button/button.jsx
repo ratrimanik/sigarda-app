@@ -2,7 +2,8 @@
 const Button = (props) => {
     //mencegah duplicate button
     const { 
-      children, 
+      children,
+      icon = null, 
       color,  
       onClick = () => {}, // Default Function Kosong
       type="button",
@@ -15,6 +16,7 @@ const Button = (props) => {
         onClick={() => onClick()} // Button Handler Login
       >
         {children}
+        <div className="">{icon}</div>
       </button>
     );
   }; //Konsep Components dan Props di React (Manual)
