@@ -5,7 +5,7 @@ import Icon from "./icon";
 
 const AskLabel = () => {
   return (
-    <div className="bg-white h-24 mb-4 px-4 md:max-w-2xl rounded-lg shadow-md">
+    <div className="bg-white h-24 mb-4 px-4 md:max-w-[650px] rounded-lg shadow-md">
       <div className="flex items-center pt-3">
         <BsFillPCircleFill className="text-3xl text-[#E92A2A] " />
         <input

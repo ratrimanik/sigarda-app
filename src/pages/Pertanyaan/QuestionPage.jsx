@@ -3,6 +3,7 @@ import AuthLayout from "../../fragments/authlayout";
 import CardQuest from "../../components/CardPostQuestion/cardquest";
 import { dataQuest } from "../../components/CardPostQuestion/datacardquest";
 import HeaderQuest from "../../fragments/headerquest";
+import CardScroll from "../../components/CardScroll/cardscroll";
 
 const QuestionPage = () => {
   const unfollowedData = dataQuest.filter((item) => !item.status);
@@ -16,6 +17,7 @@ const QuestionPage = () => {
           ))}
         </div>
       </HeaderQuest>
+      <CardScroll />
     </AuthLayout>
   );
 };

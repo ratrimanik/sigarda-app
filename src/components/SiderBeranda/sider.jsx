@@ -16,12 +16,14 @@ const Sider = () => {
   const isFollowPage = location.pathname === "/follow";
 
   return (
-    <div className="w-64 pl-12">
+    <div className="pl-12">
       <div className="relative mt-16">
         <input
           type="text"
-          className="w-64 pl-12 h-8 bg-white border-white shadow-md text-sm rounded-full focus:outline-none text-black"
-          placeholder={isHomePage || isFollowPage ? "Cari di Sigarda" : "Permintaan"}
+          className="w-60 pl-12 h-8 bg-white border-white shadow-md text-sm rounded-full focus:outline-none text-black"
+          placeholder={
+            isHomePage || isFollowPage ? "Cari di Sigarda" : "Permintaan"
+          }
         />
         {isHomePage || isFollowPage ? (
           <IoSearchOutline className="absolute left-6 top-1/2 transform -translate-y-1/2 text-gray-500" />
@@ -30,7 +32,7 @@ const Sider = () => {
         )}
       </div>
 
-      <div className="bg-white border-white shadow-md rounded-lg mt-4 w-64">
+      <div className="bg-white border-white shadow-md rounded-lg mt-4 w-60">
         <Header
           image="src/assets/img/pertanyaan-teratas.png"
           title="Pertanyaan Teratas"
@@ -63,7 +65,7 @@ const Sider = () => {
         </div>
       </div>
 
-      <div className="bg-white border-white shadow-md rounded-lg my-4 w-64">
+      <div className="bg-white border-white shadow-md rounded-lg my-4 w-60">
         <Header
           image="src/assets/img/penulis-terbaik.png"
           title="Kontributor Terbaik"
@@ -110,6 +112,10 @@ const Sider = () => {
           />
         </div>
       </div>
+      <img 
+      src="src/assets/img/Ads.png"
+      className="-ml-2 w-[280px]"
+      />
     </div>
   );
 };

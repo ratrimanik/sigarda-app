@@ -18,6 +18,13 @@ const Draf = () => {
                 <br /> 
                 pada bagian Pertanyaan untuk Anda.
               </p>
+              <button
+                type="button"
+                className="text-xs bg-primary text-white rounded-full px-6 py-2 font-bold mt-4"
+              >
+                <p>Tampilkan Pertanyaan untuk anda</p>
+
+              </button>
             </div>
           </div>
         </div>

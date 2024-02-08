@@ -21,20 +21,20 @@ const Profile = (props) => {
           <p className="text-xs text-gray-400">{address}</p>
           <div className="">
             <Button
-              color="bg-[#9A9A9A] items-center justify-between"
+              color="bg-[#9A9A9A] items-center"
               className="flex"
             >
               <p className="text-[#F8F3F3] text-[10px]">{followers}</p>
             </Button>
             <Button
-              color="bg-primary items-center justify-between"
+              color="bg-primary items-center"
               className="flex"
             >
               <p className="text-white px-2 text-[10px]">Ikuti</p>
             </Button>
           </div>
         </div>
-        <Button color="bg-[#F39237] h-4 w-[74px]">
+        <Button color="bg-[#F39237] h-4 w-[74px] -ml-4">
           <p className="text-white text-[10px]">{points}</p>
         </Button>
       </div>

@@ -5,6 +5,7 @@ import CardPost from "../../components/CardPostDashboard/cardpost";
 import { dummyCard } from "../../components/CardPostDashboard/datacard";
 import { useLocation } from "react-router-dom";
 import AuthLayout from "../../fragments/authlayout";
+import CardScroll from "../../components/CardScroll/cardscroll";
 
 const Dashboard = () => {
   const location = useLocation();
@@ -48,6 +49,7 @@ const Dashboard = () => {
                   <CardPost key={index} data={cardData} />
                 ))}
               </div>
+             <CardScroll />
             </div>
           </div>
         </div>
