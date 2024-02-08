@@ -6,6 +6,7 @@ import { dummyCard } from "../../components/CardPostDashboard/datacard";
 import { useLocation } from "react-router-dom";
 import AuthLayout from "../../fragments/authlayout";
 import CardScroll from "../../components/CardScroll/cardscroll";
+import { FaCirclePlus } from "react-icons/fa6";
 
 const Dashboard = () => {
   const location = useLocation();
@@ -28,9 +29,11 @@ const Dashboard = () => {
                 <ButtonHandlerFollow />
               </div>
               <div className="flex mt-4 gap-2">
-                <Button color="bg-[#B7D1E9] items-center h-7">
-                  <p className="text-primary px-2 text-xs">Tambahkan</p>
-                  {/* <FaCirclePlus className="text-primary"/> */}
+                <Button
+                  color="relative bg-[#B7D1E9] items-center h-7 text-primary"
+                  icon={<FaCirclePlus className="absolute inset-y-0 right-0 text-[28px]" />}
+                >
+                  <p className="pl-2 pr-8 text-xs">Tambahkan</p>
                 </Button>
                 <img
                   src="src/assets/img/darkmode.png"

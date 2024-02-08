@@ -9,6 +9,7 @@ import { useState } from "react";
 const CardPost = ({ data }) => {
   const [isImageCentered, setIsImageCentered] = useState(false);
   const [isAnswerVisible, setIsAnswerVisible] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const {
     name,
@@ -24,6 +25,7 @@ const CardPost = ({ data }) => {
   const toggleAnswerAndImage = () => {
     setIsAnswerVisible(!isAnswerVisible);
     setIsImageCentered(!isImageCentered);
+    setIsExpanded(!isExpanded);
   };
 
   return (
