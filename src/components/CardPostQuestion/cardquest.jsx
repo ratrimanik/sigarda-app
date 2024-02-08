@@ -14,7 +14,7 @@ const CardQuest = ({data}) => {
 } = data;
 
   return (
-    <div className="bg-white h-full mb-4 px-4 w-[600px] rounded-lg shadow-md">
+    <div className="bg-white h-full mb-4 px-4 md:max-w-[650px] rounded-lg shadow-md">
       <div className="py-4 ">
         <div className="flex justify-between">
           <div className="font-bold text-[13px] pr-4">{quest}</div>

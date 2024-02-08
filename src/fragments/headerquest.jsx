@@ -7,9 +7,9 @@ const HeaderQuest = (props) => {
   const { children } = props;
 
   return (
-    <div className="bg-[#F2F9FF]">
+    <div className="bg-[#F2F9FF] px-2">
       <div className="flex">
-        <div>
+        <div className="pr-7">
           <h1 className="text-xl font-bold text-primary">Pertanyaan</h1>
           <div className="flex justify-between">
             <ButtonHandlerQuestion />

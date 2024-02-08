@@ -19,7 +19,7 @@ const Dashboard = () => {
 
   return (
     <AuthLayout>
-      <div className="bg-[#F2F9FF]">
+      <div className="bg-[#F2F9FF] px-2">
         <div className="flex">
           <div>
             <h1 className="text-xl font-bold text-primary">Beranda</h1>
@@ -45,14 +45,25 @@ const Dashboard = () => {
             <div>
               <AskLabel />
               <div>
-                {filteredData.map((cardData, index) => (
-                  <CardPost key={index} data={cardData} />
-                ))}
+                {filteredData.map((cardData, index) => {
+                  if (cardData.status === "Ikuti" && index === 1) {
+                    return (
+                      <>
+                        <CardScroll />
+                        <CardPost key={index} data={cardData} />
+                      </>
+                    );
+                  }
+                  return <CardPost key={index} data={cardData} />;
+                })}
               </div>
-             <CardScroll />
             </div>
           </div>
         </div>
+        <img
+          src="src/assets/img/Ads (1).png"
+          className="w-[690px] h-40 -ml-3"
+        ></img>
       </div>
     </AuthLayout>
   );

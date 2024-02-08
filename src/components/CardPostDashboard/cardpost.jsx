@@ -7,23 +7,23 @@ import IconCard from "./iconcard";
 import { useState } from "react";
 
 const CardPost = ({ data }) => {
-  const [showFullAnswer, setShowFullAnswer] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isImageCentered, setIsImageCentered] = useState(false);
+  const [isAnswerVisible, setIsAnswerVisible] = useState(false);
 
-  const { 
-    name, 
-    status, 
-    job, 
-    date, 
-    quest, 
-    answer, 
+  const {
+    name,
+    status,
+    job,
+    date,
+    quest,
+    answer,
     image = null,
-    profile, 
+    profile,
   } = data;
 
-  const toggleAnswerVisibility = () => {
-    setShowFullAnswer(!showFullAnswer);
-    setIsExpanded(!isExpanded);
+  const toggleAnswerAndImage = () => {
+    setIsAnswerVisible(!isAnswerVisible);
+    setIsImageCentered(!isImageCentered);
   };
 
   return (
@@ -57,29 +57,32 @@ const CardPost = ({ data }) => {
           <p className="font-bold text-xs py-2">{quest}</p>
         </div>
         <div className="flex">
-          <div className="text-xs pl-2">
-            <div className="text-justify">
-              {showFullAnswer ? answer : `${answer.substring(0, 400)}...`}
-              {showFullAnswer ? (
-                <button
-                  onClick={toggleAnswerVisibility}
-                  className="text-[#9A9A9A]"
-                >
-                  Tampilkan Lebih Sedikit
-                </button>
-              ) : (
-                <button
-                  onClick={toggleAnswerVisibility}
-                  className="text-primary"
-                >
-                  Lihat Selengkapnya
-                </button>
-              )}
+          <div className={`flex ${isImageCentered ? "justify-center" : ""}`}>
+            <div className="text-xs pl-2">
+              <div className="text-justify">
+                {isAnswerVisible ? answer : `${answer.substring(0, 400)}`}
+                {answer.length > 400 && (
+                  <button
+                    onClick={toggleAnswerAndImage}
+                    className={`mt-2 ${
+                      isAnswerVisible ? "text-[#9A9A9A]" : "text-primary"
+                    }`}
+                  >
+                    {isAnswerVisible
+                      ? "Tampilkan Lebih Sedikit"
+                      : "...Lihat Selengkapnya"}
+                  </button>
+                )}
+              </div>
             </div>
+            {image && (
+              <img
+                src={image}
+                alt=""
+                className="w-full h-auto pl-4 rounded-lg"
+              />
+            )}
           </div>
-          {image && (
-            <img src={image} alt="" className="w-full h-auto pl-4 rounded-lg" />
-          )}
         </div>
         <IconCard />
       </div>

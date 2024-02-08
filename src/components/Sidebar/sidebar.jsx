@@ -1,10 +1,16 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useState } from "react";
 import { Sidebar } from "flowbite-react";
 import { BsFillPCircleFill } from "react-icons/bs";
 import SidebarMenu from "./sidebarMenu";
 
 const SideBar = () => {
+  const [activePage, setActivePage] = useState("");
+
+  const handleMenuItemClick = (pageTitle) => {
+    setActivePage(pageTitle);
+  };
+
   return (
     <Sidebar
       className="bg-white dark:bg-gray-800 shadow-lg fixed top-0 left-0 w-52 h-screen z-40"
@@ -21,26 +27,36 @@ const SideBar = () => {
               image="src/assets/img/beranda.png"
               href="/"
               title="Beranda"
+              isActive={activePage === "Beranda"}
+              onClick={() => handleMenuItemClick('Beranda')}
             />
             <SidebarMenu
               image="src/assets/img/jelajahi.png"
               href="/"
               title="Jelajahi"
+              isActive={activePage === "Jelajahi"}
+              onClick={() => handleMenuItemClick('Jelajahi')}
             />
             <SidebarMenu
               image="src/assets/img/tanya.png"
               href="/question"
               title="Pertanyaan"
+              isActive={activePage === "Pertanyaan"}
+              onClick={() => handleMenuItemClick('Pertanyaan')}
             />
             <SidebarMenu
               image="src/assets/img/forum.png"
               href="/forum"
               title="Forum"
+              isActive={activePage === "Forum"}
+              onClick={() => handleMenuItemClick('Forum')}
             />
             <SidebarMenu
               image="src/assets/img/notif.png"
               href="/"
               title="Notifikasi"
+              isActive={activePage === "Notifikasi"}
+              onClick={() => handleMenuItemClick('Notifikasi')}
             />
           </Sidebar.ItemGroup>
           <div className="pt-24">
@@ -48,10 +64,7 @@ const SideBar = () => {
               icon={<BsFillPCircleFill className="text-primary" />}
               title="Profil"
             />
-            <SidebarMenu
-            image="src/assets/img/more.png" 
-            title="Lebih banyak"
-            />
+            <SidebarMenu image="src/assets/img/more.png" title="Lebih banyak" />
           </div>
         </Sidebar.Items>
       </div>

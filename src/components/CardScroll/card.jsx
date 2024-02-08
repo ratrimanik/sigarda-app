@@ -4,7 +4,7 @@ import { MdClose } from "react-icons/md";
 const Card = ({ title, description, image }) => {
   return (
     <div className="inline-block">
-      <div className="w-36 h-52 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow ">
+      <div className="w-36 h-52 max-w-xs overflow-hidden rounded-lg shadow-md bg-white">
         <button
           type="button"
           className="text-md text-[#9A9A9A] rounded-full pt-2 ml-28 font-bold"

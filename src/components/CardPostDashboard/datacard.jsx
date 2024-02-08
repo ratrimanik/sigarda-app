@@ -20,6 +20,7 @@ export const dummyCard = [
     },
     {
         name: 'Design Grafis',
+        profile: 'src/assets/img/profile3.png',
         status: 'Mengikuti',
         job: 'Full Stack Developer',
         date: '11-04-2021 23.08',
@@ -28,19 +29,13 @@ export const dummyCard = [
     },
     {
         name: 'Design Grafis',
+        profile: 'src/assets/img/profile3.png',
         status: 'Mengikuti',
         job: 'Full Stack Developer',
         date: '11-04-2021 23.08',
         quest: 'Sebagai seorang desainer grafis, apa saja yang diperhatikan dalam mendesain sebuah logo? Apakah termasuk filosofi, kesesuaian logo dengan entitas bisnis, dan sebagainya?',
         answer: 'Desainer grafis harus lebih berhati-hati dalam membuat LOGO. Karena Design Logo pada dasarnya bertujuan untuk membangun citra merek dan menyampaikan pesan bisnis. Pemilihan skema warna, tipografi, simbol, dan gambar yang cermat merupakan kunci keberhasilan sebuah logo dalam membuat kesan yang bertahan lama. Selain dari itu juga, Logo harus mempunyai makna sehingga mampu menjadi simbol pengingat akan visi dan misi. Berikut adalah pertimbangan bagi desainer grafis untuk memastikan dapat menghasilkan logo unik yang membantu meningkatkan citra merk klien... ',
     },
-    {
-        name: 'Ardhika Fadillah',
-        status: 'Mengikuti',
-        job: 'Full Stack Developer',
-        date: '11-04-2021 23.08',
-        quest: 'Apa yang harus saya perhatikan saat interview?',
-        answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur assumenda quisquam porro, vitae accusamus numquam, rerum cumque architecto maxime odit beatae. Ipsum eveniet repellendus beatae facilis repudiandae neque quibusdam quos?',
-    },
+    
 ]
 
