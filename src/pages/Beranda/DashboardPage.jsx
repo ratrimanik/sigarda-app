@@ -31,15 +31,19 @@ const Dashboard = () => {
               <div className="flex mt-4 gap-2">
                 <Button
                   color="relative bg-[#B7D1E9] items-center h-7 text-primary"
-                  icon={<FaCirclePlus className="absolute inset-y-0 right-0 text-[28px]" />}
+                  icon={
+                    <FaCirclePlus className="absolute inset-y-0 right-0 text-[28px]" />
+                  }
                 >
-                  <p className="pl-2 pr-8 text-xs">Tambahkan</p>
+                  <p className="pl-2 pr-7 text-xs">Tambahkan</p>
                 </Button>
-                <img
-                  src="src/assets/img/darkmode.png"
-                  alt=""
-                  className="w-7 h-7"
-                />
+                <button>
+                  <img
+                    src="src/assets/img/filter.png"
+                    alt=""
+                    className="w-7 h-7"
+                  />
+                </button>
               </div>
             </div>
 

@@ -38,9 +38,9 @@ const CardPost = ({ data }) => {
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
                   <p className="text-xs font-bold">{name}</p>
-                  <p className="text-xs text-primary font-bold ml-2">
+                  <button className="text-xs text-primary font-bold ml-2">
                     {status}
-                  </p>
+                  </button>
                 </div>
               </div>
               <div className="text-[10px] text-gray-300 flex">
@@ -50,10 +50,10 @@ const CardPost = ({ data }) => {
               </div>
             </div>
           </div>
-          <div className="flex gap-4">
+          <button className="flex gap-4">
             <IoIosMore />
             <MdClose />
-          </div>
+          </button>
         </div>
         <div className=" h-full mb-4 max-w-md px-4 md:max-w-2xl rounded-lg shadow-lg mt-2 border">
           <p className="font-bold text-xs py-2">{quest}</p>

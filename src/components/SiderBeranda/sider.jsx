@@ -9,6 +9,7 @@ import Header from "./header";
 import Profile from "./profile";
 import Button from "../Button/button";
 import { useLocation } from "react-router-dom";
+import RecomForum from "../SiderForum/rekomendasiForum";
 
 const Sider = () => {
   const location = useLocation();
@@ -18,13 +19,17 @@ const Sider = () => {
   return (
     <div className="pl-5">
       <div className="relative mt-16">
-        <input
-          type="text"
-          className="w-60 pl-12 h-8 bg-white border-white shadow-md text-sm rounded-full focus:outline-none text-black"
-          placeholder={
-            isHomePage || isFollowPage ? "Cari di Sigarda" : "Permintaan"
-          }
-        />
+        {isHomePage || isFollowPage ? (
+          <input
+            type="text"
+            className="w-60 pl-12 h-8 rounded-full focus:outline-none text-sm border-white shadow-md bg-white"
+            placeholder="Cari di Sigarda"
+          />
+        ) : (
+          <button className="w-60 h-8 rounded-full focus:outline-none text-white text-sm bg-primary">
+            Permintaan
+          </button>
+        )}
         {isHomePage || isFollowPage ? (
           <IoSearchOutline className="absolute left-6 top-1/2 transform -translate-y-1/2 text-gray-500" />
         ) : (
@@ -65,7 +70,7 @@ const Sider = () => {
         </div>
       </div>
 
-      <div className="bg-white border-white shadow-md rounded-lg my-4 w-60">
+      <div className="bg-white border-white shadow-md rounded-lg mt-4 mb-2 w-60">
         <Header
           image="src/assets/img/penulis-terbaik.png"
           title="Kontributor Terbaik"
@@ -112,10 +117,8 @@ const Sider = () => {
           />
         </div>
       </div>
-      <img 
-      src="src/assets/img/Ads.png"
-      className="-ml-2 w-[280px]"
-      />
+      <img src="src/assets/img/Ads.png" className="-ml-2 w-[280px]" />
+      <RecomForum />
     </div>
   );
 };

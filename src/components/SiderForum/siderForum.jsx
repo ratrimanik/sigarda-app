@@ -1,7 +1,6 @@
 /* eslint-disable react/no-children-prop */
 import { Bs2CircleFill } from "react-icons/bs";
-import Header from "../SiderBeranda/header";
-import ProfileForum from "./profileForum";
+import RecomForum from "./rekomendasiForum";
 
 const SiderForum = () => {
   return (
@@ -16,18 +15,7 @@ const SiderForum = () => {
         </button>
       </div>
 
-      <div className="bg-white border-white shadow-md rounded-lg mt-4 w-64">
-        <Header
-          image="src/assets/img/forumsider.png"
-          title="Rekomendasi Forum"
-        />
-
-        <hr className="mt-1" />
-
-        <div className="pb-2">
-          <ProfileForum />
-        </div>
-      </div>
+      <RecomForum />
     </div>
   );
 };

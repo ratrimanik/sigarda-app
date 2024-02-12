@@ -18,14 +18,18 @@ const AskLabel = () => {
       <hr className="my-2"></hr>
 
       <div className="flex gap-12 ml-4 text-bold">
-        <Icon
-          icon={<BsFillQuestionCircleFill className="text-primary" />}
-          title="Tambah Pertanyaan"
-        />
-        <Icon
-          icon={<IoCreateOutline className="text-primary" />}
-          title="Buat Kiriman Informasi"
-        />
+        <button>
+          <Icon
+            icon={<BsFillQuestionCircleFill className="text-primary" />}
+            title="Tambah Pertanyaan"
+          />
+        </button>
+        <button>
+          <Icon
+            icon={<IoCreateOutline className="text-primary" />}
+            title="Buat Kiriman Informasi"
+          />
+        </button>
       </div>
     </div>
   );

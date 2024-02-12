@@ -16,7 +16,7 @@ const SideBar = () => {
       className="bg-white dark:bg-gray-800 shadow-lg fixed top-0 left-0 w-52 h-screen z-40"
       aria-label="Sidebar with logo branding example"
     >
-      <div className="pl-4">
+      <div className="pl-2">
         <Sidebar.Logo className="w-24">
           <img src="/src/assets/img/logo-sigarda.png" alt="Logo" />
         </Sidebar.Logo>
