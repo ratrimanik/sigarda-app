@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
@@ -8,7 +9,6 @@ import QuestionPage from './pages/Pertanyaan/QuestionPage'
 import ForYouPage from './pages/Pertanyaan/ForYouPage'
 import Draf from './pages/Pertanyaan/Draf'
 import Forum from './pages/Forum/forum'
-
 
 const router = createBrowserRouter([
   {

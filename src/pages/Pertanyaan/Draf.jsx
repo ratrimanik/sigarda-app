@@ -1,9 +1,9 @@
-import AuthLayout from "../../fragments/authlayout";
 import HeaderQuest from "../../fragments/headerquest";
+import SidebarLayout from "../../fragments/sidebarlayout";
 
 const Draf = () => {
   return (
-    <AuthLayout>
+    <SidebarLayout>
       <HeaderQuest>
         <div className="h-full mb-4 w-[650px] justify-center items-center mt-8">
           <div className="text-center">
@@ -29,7 +29,7 @@ const Draf = () => {
           </div>
         </div>
       </HeaderQuest>
-    </AuthLayout>
+    </SidebarLayout>
   );
 };
 
