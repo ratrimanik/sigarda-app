@@ -58,31 +58,40 @@ const CardPost = ({ data }) => {
         <div className=" h-full mb-4 max-w-md px-4 md:max-w-2xl rounded-lg shadow-lg mt-2 border">
           <p className="font-bold text-xs py-2">{quest}</p>
         </div>
-        <div className="flex">
-          <div className={`flex ${isImageCentered ? "justify-center" : ""}`}>
-            <div className="text-xs pl-2">
-              <div className="text-justify">
-                {isAnswerVisible ? answer : `${answer.substring(0, 400)}`}
-                {answer.length > 400 && (
+        <div className="text-xs ">
+          <div className="text-justify">
+            {isAnswerVisible ? (
+              <div>
+                {image && (
+                  <img src={image} alt="" className="w-full rounded-lg mb-4" />
+                )}
+                {isAnswerVisible ? answer : `${answer.length > 400}`}
+                <button
+                  onClick={toggleAnswerAndImage}
+                  className="text-[#9A9A9A]"
+                >
+                  Lihat Lebih Sedikit
+                </button>
+              </div>
+            ) : (
+              <div className="flex">
+                <div>
+                  {isAnswerVisible ? answer : `${answer.substring(0, 400)}`}
                   <button
                     onClick={toggleAnswerAndImage}
-                    className={`mt-2 ${
-                      isAnswerVisible ? "text-[#9A9A9A]" : "text-primary"
-                    }`}
+                    className="text-primary"
                   >
-                    {isAnswerVisible
-                      ? "Tampilkan Lebih Sedikit"
-                      : "...Lihat Selengkapnya"}
+                    ...Lihat Selengkapnya
                   </button>
+                </div>
+                {image && (
+                  <img
+                    src={image}
+                    alt=""
+                    className="w-52 h-32 pl-4 rounded-lg"
+                  />
                 )}
               </div>
-            </div>
-            {image && (
-              <img
-                src={image}
-                alt=""
-                className="w-full h-auto pl-4 rounded-lg"
-              />
             )}
           </div>
         </div>
