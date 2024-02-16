@@ -26,8 +26,8 @@ const Sider = () => {
             placeholder="Cari di Sigarda"
           />
         ) : (
-          <button className="w-60 h-8 rounded-full focus:outline-none text-white text-sm bg-primary">
-            Permintaan
+          <button className="w-60 h-8  rounded-full focus:outline-none text-white text-sm bg-primary">
+            <p className="-ml-28">Permintaan</p>
           </button>
         )}
         {isHomePage || isFollowPage ? (

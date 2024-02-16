@@ -8,19 +8,15 @@ import Sider from "../components/SiderBeranda/sider";
 import SidebarMenu from "../components/Sidebar/sidebarMenu";
 import Dashboard from "../pages/Beranda/DashboardPage";
 import QuestionPage from "../pages/Pertanyaan/QuestionPage";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Forum from "../pages/Forum/forum";
 
 const SidebarLayout = ({ children }) => {
   const navigate = useNavigate();
   const content = [Dashboard, null, QuestionPage, Forum, null];
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex] = useState(0);
 
   const [activePage, setActivePage] = useState("");
-
-  const handleMenuItemClick = (pageTitle) => {
-    setActivePage(pageTitle);
-  };
 
   return (
     <div className="bg-[#F2F9FF]">
@@ -39,84 +35,41 @@ const SidebarLayout = ({ children }) => {
                   <Sidebar.Item className="text-primary font-bold">
                     Menu
                   </Sidebar.Item>
-                  <SidebarMenu
-                    color={
-                      currentIndex == 0
-                        ? "text-primary"
-                        : "text-[#9A9A9A]"
-                    }
+                  <SidebarMenu 
+                    navigate="/"
                     image="src/assets/img/beranda.png"
                     title="Beranda"
-                    isActive={activePage === "Beranda"}
-                    onClick={() =>
-
-                      {navigate('/')
-                        setCurrentIndex(0)}
-                    }
                   />
                   <SidebarMenu
-                    color={
-                      currentIndex == 1
-                        ? "text-primary"
-                        : "text-[#9A9A9A]"
-                    }
-                    image="src/assets/img/jelajahi.png"
-                    title="Jelajahi"
-                    isActive={activePage === "Jelajahi"}
-                    onClick={() =>
-                      {navigate('/')
-                        setCurrentIndex(1)}
-                    }
+                   navigate="/jelajahi"
+                   image="src/assets/img/jelajahi.png"
+                   title="Jelajahi" 
                   />
-                  <SidebarMenu
-                    color={
-                      currentIndex == 2
-                        ? "text-primary"
-                        : "text-[#9A9A9A]"
-                    }
+                  <SidebarMenu 
+                    navigate="/question"
                     image="src/assets/img/tanya.png"
                     title="Pertanyaan"
                     isActive={activePage === "Pertanyaan"}
-                    onClick={() =>
-                      {navigate('/question')
-                        setCurrentIndex(2)}
-                    }
                   />
-                  <SidebarMenu
-                    color={
-                      currentIndex == 3
-                        ? "text-primary"
-                        : "text-[#9A9A9A]"
-                    }
+                  <SidebarMenu 
+                    navigate="/forum"
                     image="src/assets/img/forum.png"
                     title="Forum"
-                    isActive={activePage === "Forum"}
-                    onClick={() =>
-                      {navigate('/')
-                        setCurrentIndex(3)}
-                    }
                   />
-                  <SidebarMenu
-                    color={
-                      currentIndex == 4
-                        ? "text-primary"
-                        : "text-[#9A9A9A]"
-                    }
+                  <SidebarMenu 
+                    navigate="/notif"
                     image="src/assets/img/notif.png"
                     title="Notifikasi"
-                    isActive={activePage === "Notifikasi"}
-                    onClick={() =>
-                      {navigate('/')
-                        setCurrentIndex(4)}
-                    }
                   />
                 </Sidebar.ItemGroup>
                 <div className="pt-24">
                   <SidebarMenu
+                    navigate="/profil"
                     icon={<BsFillPCircleFill className="text-primary" />}
                     title="Profil"
                   />
                   <SidebarMenu
+                    navigate="/"
                     image="src/assets/img/more.png"
                     title="Lebih banyak"
                   />
