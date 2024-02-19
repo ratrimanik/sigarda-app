@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const ButtonHandlerQuestion = () => {
   return (
-    <div className="flex pt-8 gap-2 text-xs text-gray-400">
+    <div className="flex pt-4 gap-2 text-xs text-gray-400">
       <NavLink
         to="/question"
         className={({ isActive }) =>

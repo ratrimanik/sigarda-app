@@ -13,7 +13,7 @@ const Forum = () => {
             <h1 className="text-xl font-bold text-primary">Forum</h1>
 
             <div>
-              <div className="flex gap-4">
+              <div className="flex gap-4 mt-3">
                 <div className="relative mb-4 w-full mr-2">
                   <input
                     type="text"
