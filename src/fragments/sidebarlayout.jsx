@@ -8,10 +8,17 @@ import Sider from "../components/SiderBeranda/sider";
 import SidebarMenu from "../components/Sidebar/sidebarMenu";
 import Dashboard from "../pages/Beranda/DashboardPage";
 import QuestionPage from "../pages/Pertanyaan/QuestionPage";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Forum from "../pages/Forum/forum";
+import SiderForum from "../components/SiderForum/siderForum";
 
 const SidebarLayout = ({ children }) => {
+  const location = useLocation();
+  const isForumPage = location.pathname === "/forum";
+  const isJelajahiPage = location.pathname === "/jelajahi";
+  const isNotifikasiPage = location.pathname === "/notif";
+  const isUnreadPage = location.pathname === "/unread";
+
   const navigate = useNavigate();
   const content = [Dashboard, null, QuestionPage, Forum, null];
   const [currentIndex] = useState(0);
@@ -35,28 +42,28 @@ const SidebarLayout = ({ children }) => {
                   <Sidebar.Item className="text-primary font-bold">
                     Menu
                   </Sidebar.Item>
-                  <SidebarMenu 
+                  <SidebarMenu
                     navigate="/"
                     image="src/assets/img/beranda.png"
                     title="Beranda"
                   />
                   <SidebarMenu
-                   navigate="/jelajahi"
-                   image="src/assets/img/jelajahi.png"
-                   title="Jelajahi" 
+                    navigate="/jelajahi"
+                    image="src/assets/img/jelajahi.png"
+                    title="Jelajahi"
                   />
-                  <SidebarMenu 
+                  <SidebarMenu
                     navigate="/question"
                     image="src/assets/img/tanya.png"
                     title="Pertanyaan"
                     isActive={activePage === "Pertanyaan"}
                   />
-                  <SidebarMenu 
+                  <SidebarMenu
                     navigate="/forum"
                     image="src/assets/img/forum.png"
                     title="Forum"
                   />
-                  <SidebarMenu 
+                  <SidebarMenu
                     navigate="/notif"
                     image="src/assets/img/notif.png"
                     title="Notifikasi"
@@ -81,8 +88,12 @@ const SidebarLayout = ({ children }) => {
         <div className="pt-6">
           {children ? children : content[currentIndex]()}
         </div>
-        <div className="">
-          <Sider />
+        <div>
+          {isForumPage || isJelajahiPage || isNotifikasiPage || isUnreadPage ? (
+            <SiderForum />
+          ) : (
+            <Sider />
+          )}
         </div>
       </div>
     </div>

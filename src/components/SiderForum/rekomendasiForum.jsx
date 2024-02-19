@@ -3,7 +3,7 @@ import ProfileForum from "./profileForum";
 
 const RecomForum = () => {
     return(
-        <div className="bg-white border-white shadow-md rounded-lg mb-4 w-60">
+        <div className="bg-white border-white shadow-md rounded-lg mb-4 w-64 mt-2">
         <Header
           image="src/assets/img/forumsider.png"
           title="Rekomendasi Forum"

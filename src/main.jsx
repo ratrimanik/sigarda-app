@@ -9,6 +9,9 @@ import QuestionPage from './pages/Pertanyaan/QuestionPage'
 import ForYouPage from './pages/Pertanyaan/ForYouPage'
 import Draf from './pages/Pertanyaan/Draf'
 import Forum from './pages/Forum/forum'
+import JelajahiPage from './pages/Jelajahi/Jelajahi'
+import NotifikasiPage from './pages/Notifikasi/notifikasi'
+import Unread from './pages/Notifikasi/Unread'
 
 const router = createBrowserRouter([
   {
@@ -34,7 +37,19 @@ const router = createBrowserRouter([
   {
     path: '/forum',
     element: <Forum />
-  }
+  },
+  {
+    path: '/jelajahi',
+    element: <JelajahiPage />
+  },
+  {
+    path: '/notif',
+    element: <NotifikasiPage />
+  },
+  {
+    path: '/unread',
+    element: <Unread />
+  },
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
