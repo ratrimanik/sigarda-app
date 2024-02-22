@@ -4,7 +4,7 @@ import { FaSquarePlus } from "react-icons/fa6";
 import LastSearch from "../../components/PencarianTerakhir/lastSearch";
 import CardForum from "../../components/CardForum/cardForum";
 
-const Forum = () => {
+const ForumPage = () => {
   return (
     <SidebarLayout>
       <div className="w-[660px]">
@@ -110,4 +110,4 @@ const Forum = () => {
   );
 };
 
-export default Forum;
+export default ForumPage;

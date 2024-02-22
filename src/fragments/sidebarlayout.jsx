@@ -9,7 +9,7 @@ import SidebarMenu from "../components/Sidebar/sidebarMenu";
 import Dashboard from "../pages/Beranda/DashboardPage";
 import QuestionPage from "../pages/Pertanyaan/QuestionPage";
 import { useLocation, useNavigate } from "react-router-dom";
-import Forum from "../pages/Forum/forum";
+import Forum from "../pages/Forum/ForumPage";
 import SiderForum from "../components/SiderForum/siderForum";
 
 const SidebarLayout = ({ children }) => {

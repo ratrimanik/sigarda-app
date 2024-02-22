@@ -2,7 +2,7 @@ import ButtonHandlerNotif from "../../components/Button/handlernotif";
 import CardNotifikasi from "../../components/CardNotifikasi/cardnotifikasi";
 import SidebarLayout from "../../fragments/sidebarlayout";
 
-const Unread = () => {
+const UnreadPage = () => {
     return(
         <SidebarLayout>
             <div className="w-[660px]">
@@ -45,4 +45,4 @@ const Unread = () => {
     )
 }
 
-export default Unread;
+export default UnreadPage;
