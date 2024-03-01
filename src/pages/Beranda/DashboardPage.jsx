@@ -7,6 +7,8 @@ import { useLocation } from "react-router-dom";
 import CardScroll from "../../components/CardScroll/cardscroll";
 import { FaCirclePlus } from "react-icons/fa6";
 import SidebarLayout from "../../fragments/sidebarlayout";
+import NavbarPage from "../../components/HeaderMobile/title";
+import HeaderMobile from "../../fragments/headermobile";
 
 const Dashboard = () => {
   const location = useLocation();
@@ -21,16 +23,16 @@ const Dashboard = () => {
   return (
     <SidebarLayout>
       <div>
-        <div className="bg-[#F2F9FF] px-2">
+        <div className="md:bg-[#F2F9FF] bg-white px-2">
           <div className="flex">
             <div>
-              <div>
-                <h1 className="text-xl font-bold text-primary">Beranda</h1>
-                <div className="flex justify-between">
+              <div className="hidden lg:block">
+              <NavbarPage title="Pertanyaan" />
+                <div className="flex justify-between items-center">
                   <div className="flex pt-4 gap-2">
                     <ButtonHandlerFollow />
                   </div>
-                  <div className="flex mt-4 gap-2">
+                  <div className="md:flex mt-4 gap-2 hidden xs:block">
                     <Button
                       color="relative bg-[#B7D1E9] items-center h-7 text-primary"
                       icon={
@@ -43,18 +45,27 @@ const Dashboard = () => {
                       <img
                         src="src/assets/img/filter.png"
                         alt=""
-                        className="w-7 h-7"
+                        className="w-8 h-8 -mt-1"
                       />
                     </button>
                   </div>
                 </div>
               </div>
 
-              <hr className="border border-[#C1DFF5] my-4" />
+              <div className="md:hidden fixed top-0 left-0 w-full bg-white z-50 justify-between items-center px-8 py-4 shadow-md">
+                <HeaderMobile />
+                <div className="flex pt-4 gap-2">
+                  <ButtonHandlerFollow />
+                </div>
+              </div>
+
+              <hr className="border border-[#C1DFF5] my-4 hidden lg:block" />
 
               <div>
-                <AskLabel />
-                <div>
+                <div className="hidden lg:block">
+                  <AskLabel />
+                </div>
+                <div className="md:mt-0 mt-32">
                   {filteredData.map((cardData, index) => {
                     if (cardData.status === "Ikuti" && index === 1) {
                       return (

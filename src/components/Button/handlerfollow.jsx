@@ -11,7 +11,7 @@ const ButtonHandlerFollow = () => {
  }, [location]);
 
  return (
-    <div className="flex">
+    <div className="flex h-8">
       <Button
         color={
           !isFollowActive

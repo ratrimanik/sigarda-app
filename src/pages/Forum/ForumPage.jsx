@@ -3,14 +3,15 @@ import { IoSearchOutline } from "react-icons/io5";
 import { FaSquarePlus } from "react-icons/fa6";
 import LastSearch from "../../components/PencarianTerakhir/lastSearch";
 import CardForum from "../../components/CardForum/cardForum";
+import NavbarPage from "../../components/HeaderMobile/title";
 
 const ForumPage = () => {
   return (
     <SidebarLayout>
       <div className="w-[660px]">
-        <div className="bg-[#F2F9FF] px-2">
+        <div className="md:bg-[#F2F9FF] bg-white px-2">
           <div>
-            <h1 className="text-xl font-bold text-primary">Forum</h1>
+            <NavbarPage title="Forum" />
 
             <div>
               <div className="flex gap-4 mt-3">

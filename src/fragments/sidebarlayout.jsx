@@ -30,7 +30,7 @@ const SidebarLayout = ({ children }) => {
       <div className="flex">
         <div className="sticky top-0 left-0 z-40 w-64 h-screen">
           <Sidebar
-            className="bg-white dark:bg-gray-800 shadow-lg fixed top-0 left-0 w-52 h-screen z-40"
+            className="bg-white dark:bg-gray-800 shadow-lg fixed top-0 left-0 w-52 h-screen z-40 hidden lg:block"
             aria-label="Sidebar with logo branding example"
           >
             <div className="pl-2">
@@ -42,6 +42,7 @@ const SidebarLayout = ({ children }) => {
                   <Sidebar.Item className="text-primary font-bold">
                     Menu
                   </Sidebar.Item>
+                  {/* Sidebar in Website */}
                   <SidebarMenu
                     navigate="/"
                     image="src/assets/img/beranda.png"
@@ -63,6 +64,7 @@ const SidebarLayout = ({ children }) => {
                     image="src/assets/img/forum.png"
                     title="Forum"
                   />
+
                   <SidebarMenu
                     navigate="/notif"
                     image="src/assets/img/notif.png"
@@ -84,11 +86,36 @@ const SidebarLayout = ({ children }) => {
               </Sidebar.Items>
             </div>
           </Sidebar>
+          <div className="md:hidden flex justify-center fixed left-0 bottom-0 w-full bg-white gap-20 text-3xl z-50">
+            {" "}
+            {/* Bottom Navigation in Mobile */}
+            <SidebarMenu
+              navigate="/"
+              image="src/assets/img/beranda.png"
+              title="Beranda"
+            />
+            <SidebarMenu
+              navigate="/jelajahi"
+              image="src/assets/img/jelajahi.png"
+              title="Jelajahi"
+            />
+            <SidebarMenu
+              navigate="/question"
+              image="src/assets/img/tanya.png"
+              title="Pertanyaan"
+              isActive={activePage === "Pertanyaan"}
+            />
+            <SidebarMenu
+              navigate="/forum"
+              image="src/assets/img/forum.png"
+              title="Forum"
+            />
+          </div>
         </div>
         <div className="pt-6">
           {children ? children : content[currentIndex]()}
         </div>
-        <div>
+        <div className="hidden lg:block">
           {isForumPage || isJelajahiPage || isNotifikasiPage || isUnreadPage ? (
             <SiderForum />
           ) : (

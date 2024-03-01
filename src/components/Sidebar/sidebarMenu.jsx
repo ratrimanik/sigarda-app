@@ -1,15 +1,8 @@
-
-
 import { NavLink } from "react-router-dom";
 
 /* eslint-disable react/prop-types */
 const SidebarMenu = (props) => {
-  const { 
-    image, 
-    icon, 
-    title, 
-    navigate = null, 
-  } = props;
+  const { image, icon, title, navigate = null } = props;
 
   return (
     <sidebarMenu>
@@ -19,10 +12,16 @@ const SidebarMenu = (props) => {
           isActive ? "text-primary" : "text-[#9A9A9A]"
         }
       >
-        <div className="flex items-center py-3 -mr-3 pl-4">
-          {image && <img src={image} alt="" className="w-4 h-4" />}
-          {icon && <div className="text-2xl -ml-1">{icon}</div>}
-          <p className="text-[14px] pl-2">{title}</p>
+        <div className="md:flex flex-none py-3 items-center -mr-3 pl-4">
+          <div className="flex flex-col md:flex-row items-center justify-end">
+            {image && (
+              <img src={image} alt="" className="md:w-4 md:h-4 w-8 h-8" />
+            )}
+            {icon && <div className="md:text-2xl text-[32px] md:-ml-1">{icon}</div>}
+            <p className="md:text-[14px]  pl-2 text-[26px]  md:mb-0 font-semibold ">
+              {title}
+            </p>
+          </div>
         </div>
       </NavLink>
     </sidebarMenu>
@@ -30,5 +29,3 @@ const SidebarMenu = (props) => {
 };
 
 export default SidebarMenu;
-
-

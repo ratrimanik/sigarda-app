@@ -5,17 +5,20 @@ import JelajahiItem from "../../components/Jelajahi/jelajahiItem";
 import { dummyCard } from "../../components/CardPostDashboard/datacard";
 import CardPost from "../../components/CardPostDashboard/cardpost";
 
+import NavbarPage from "../../components/HeaderMobile/title";
+import HeaderMobile from "../../fragments/headermobile";
+
 const JelajahiPage = () => {
-  const selectedData = dummyCard[4]
+  const selectedData = dummyCard[4];
 
   return (
     <SidebarLayout>
-      <div className="w-[660px]">
-        <div className="bg-[#F2F9FF] px-2">
+      <div className="md:max-w-[650px] w-[800px] px-2">
+        <div className="md:bg-[#F2F9FF] bg-black ">
           <div>
-            <h1 className="text-xl font-bold text-primary mb-3">Jelajahi</h1>
+            <NavbarPage title="Jelajahi" />
             <div>
-              <div className="flex">
+              <div className="md:flex hidden">
                 <div className="relative mb-4 w-full mr-4">
                   <input
                     type="text"
@@ -34,8 +37,13 @@ const JelajahiPage = () => {
                   </button>
                 </div>
               </div>
+
+              <div className="md:hidden fixed top-0 left-0 w-full bg-white justify-between items-center px-4 py-4">
+                <HeaderMobile />
+              </div>
             </div>
-            <div className="bg-white h-full mb-4 px-4 rounded-lg shadow-md">
+
+            <div className="bg-black h-full mb-4 px-4  md:mt-0 mt-32 rounded-md border">
               <p className="text-[12px] font-semibold pt-2">
                 Pencarian Terakhir
               </p>
@@ -44,26 +52,14 @@ const JelajahiPage = () => {
                 <LastSearch title="UI UX" />
               </div>
             </div>
-            <div className="bg-white h-full mb-4 px-4 rounded-lg shadow-md">
+            <div className="bg-white h-full mb-4 px-4">
               <p className="text-primary font-bold text-sm py-2">
                 Tren Topik untuk Anda
               </p>
-              <JelajahiItem
-                title="Artificial Intelligence"
-                vote="120jt vote" 
-              />
-              <JelajahiItem
-                title="Politik Indonesia"
-                vote="100jt vote" 
-              />
-              <JelajahiItem
-                title="Pilpres 2024"
-                vote="80jt vote" 
-              />
-              <JelajahiItem
-                title="Mahkamah Konstitusi"
-                vote="10jt vote" 
-              />
+              <JelajahiItem title="Artificial Intelligence" vote="120jt vote" />
+              <JelajahiItem title="Politik Indonesia" vote="100jt vote" />
+              <JelajahiItem title="Pilpres 2024" vote="80jt vote" />
+              <JelajahiItem title="Mahkamah Konstitusi" vote="10jt vote" />
             </div>
           </div>
           <div>

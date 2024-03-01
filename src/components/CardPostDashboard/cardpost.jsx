@@ -29,7 +29,7 @@ const CardPost = ({ data }) => {
   };
 
   return (
-    <div className="bg-white h-full mb-4 px-4 md:max-w-[650px] rounded-lg shadow-md">
+    <div className="bg-white h-full mb-4 px-4 md:max-w-[650px] md:rounded-lg md:shadow-md">
       <div className="py-4 ">
         <div className="flex justify-between">
           <div className="flex">
@@ -55,7 +55,7 @@ const CardPost = ({ data }) => {
             <MdClose />
           </button>
         </div>
-        <div className=" h-full mb-4 max-w-md px-4 md:max-w-2xl rounded-lg shadow-lg mt-2 border">
+        <div className=" h-full mb-4 max-w-[650] px-4 md:max-w-2xl  rounded-lg shadow-lg mt-2 ">
           <p className="font-bold text-xs py-2">{quest}</p>
         </div>
         <div className="text-xs ">

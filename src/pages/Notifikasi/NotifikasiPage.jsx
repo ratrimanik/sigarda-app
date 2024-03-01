@@ -1,14 +1,15 @@
 import ButtonHandlerNotif from "../../components/Button/handlernotif";
 import CardNotifikasi from "../../components/CardNotifikasi/cardnotifikasi";
+import NavbarPage from "../../components/HeaderMobile/title";
 import SidebarLayout from "../../fragments/sidebarlayout";
 
 const NotifikasiPage = () => {
   return (
     <SidebarLayout>
       <div className="w-[660px]">
-        <div className="bg-[#F2F9FF] px-2">
+        <div className="md:bg-[#F2F9FF] bg-white px-2">
           <div>
-            <h1 className="text-xl font-bold text-primary mb-3">Notifikasi</h1>
+            <NavbarPage title="Notifikasi" />
           </div>
           <ButtonHandlerNotif />
           <CardNotifikasi
