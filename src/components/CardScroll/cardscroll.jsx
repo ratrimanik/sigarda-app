@@ -5,8 +5,8 @@ import { dataScroll } from "./datascroll";
 
 const CardScroll = () => {
   return (
-    <div className="my-4">
-      <p className="font-bold text-sm">Rekomendasi Topik</p>
+    <div className="my-4 mx-4 md:mx-0">
+      <p className="font-bold md:text-sm text-[28px]">Rekomendasi Topik</p>
       <div className=" flex flex-col  h-full my-2 md:max-w-[650px]">
         <div>
           <div className="overflow-auto scrollbar-hide ">

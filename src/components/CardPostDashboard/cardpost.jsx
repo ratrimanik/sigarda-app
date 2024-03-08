@@ -29,36 +29,36 @@ const CardPost = ({ data }) => {
   };
 
   return (
-    <div className="bg-white h-full mb-4 px-4 md:max-w-[650px] md:rounded-lg md:shadow-md">
-      <div className="py-4 ">
+    <div className="bg-white h-full mb-4 md:px-4 px-8 md:max-w-[650px] md:rounded-lg md:shadow-md">
+      <div className="py-4">
         <div className="flex justify-between">
           <div className="flex">
-            <img src={profile} alt="" className="w-8" />
+            <img src={profile} alt="" className="md:w-8 md:h-8 w-16" />
             <div className="flex flex-col ml-2">
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
-                  <p className="text-xs font-bold">{name}</p>
-                  <button className="text-xs text-primary font-bold ml-2">
+                  <p className="md:text-xs text-2xl font-bold">{name}</p>
+                  <button className="md:text-xs text-2xl text-primary font-bold ml-2">
                     {status}
                   </button>
                 </div>
               </div>
-              <div className="text-[10px] text-gray-300 flex">
+              <div className="md:text-[12px] md:-mt-1 text-xl text-gray-300 flex">
                 <p>{job}</p>
                 <span className="mx-1">·</span>
                 <p>{date}</p>
               </div>
             </div>
           </div>
-          <button className="flex gap-4">
+          <button className="flex gap-4 text-2xl md:text-sm">
             <IoIosMore />
             <MdClose />
           </button>
         </div>
         <div className=" h-full mb-4 max-w-[650] px-4 md:max-w-2xl  rounded-lg shadow-lg mt-2 ">
-          <p className="font-bold text-xs py-2">{quest}</p>
+          <p className="font-bold md:text-xs text-2xl py-2">{quest}</p>
         </div>
-        <div className="text-xs ">
+        <div className="md:text-xs text-2xl ">
           <div className="text-justify">
             {isAnswerVisible ? (
               <div>
@@ -76,7 +76,7 @@ const CardPost = ({ data }) => {
             ) : (
               <div className="flex">
                 <div>
-                  {isAnswerVisible ? answer : `${answer.substring(0, 400)}`}
+                  {isAnswerVisible ? answer : `${answer.substring(0, 300)}`}
                   <button
                     onClick={toggleAnswerAndImage}
                     className="text-primary"
@@ -88,7 +88,7 @@ const CardPost = ({ data }) => {
                   <img
                     src={image}
                     alt=""
-                    className="w-52 h-32 pl-4 rounded-lg"
+                    className="md:w-52 md:h-32 w-80  pl-4 rounded-lg"
                   />
                 )}
               </div>

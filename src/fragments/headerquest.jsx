@@ -35,14 +35,14 @@ const HeaderQuest = (props) => {
               <img src="src/assets/img/filter.png" alt="" className="w-8 h-8" />
             </div>
 
-            <div className="md:hidden fixed top-0 left-0 w-full bg-white justify-between items-center px-4 py-4">
+            <div className="md:hidden">
               <HeaderMobile />
-              <div className="flex pt-4 gap-2">
+              <div className="flex  pt-4">
                 <ButtonHandlerQuestion />
               </div>
             </div>
 
-            <div>{children}</div>
+            <div className="">{children}</div>
           </div>
         </div>
       </div>

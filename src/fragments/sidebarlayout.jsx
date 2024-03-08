@@ -64,7 +64,6 @@ const SidebarLayout = ({ children }) => {
                     image="src/assets/img/forum.png"
                     title="Forum"
                   />
-
                   <SidebarMenu
                     navigate="/notif"
                     image="src/assets/img/notif.png"
@@ -86,30 +85,32 @@ const SidebarLayout = ({ children }) => {
               </Sidebar.Items>
             </div>
           </Sidebar>
-          <div className="md:hidden flex justify-center fixed left-0 bottom-0 w-full bg-white gap-20 text-3xl z-50">
+          <div className="md:hidden flex justify-center fixed left-0 bottom-0  w-full bg-white gap-20 text-3xl z-50">
             {" "}
             {/* Bottom Navigation in Mobile */}
-            <SidebarMenu
-              navigate="/"
-              image="src/assets/img/beranda.png"
-              title="Beranda"
-            />
-            <SidebarMenu
-              navigate="/jelajahi"
-              image="src/assets/img/jelajahi.png"
-              title="Jelajahi"
-            />
-            <SidebarMenu
-              navigate="/question"
-              image="src/assets/img/tanya.png"
-              title="Pertanyaan"
-              isActive={activePage === "Pertanyaan"}
-            />
-            <SidebarMenu
-              navigate="/forum"
-              image="src/assets/img/forum.png"
-              title="Forum"
-            />
+            <div className="flex justify-center fixed left-0 bottom-0 py-4 w-full bg-white gap-20 text-3xl z-50">
+              <SidebarMenu
+                navigate="/"
+                image="src/assets/img/beranda.png"
+                title="Beranda"
+              />
+              <SidebarMenu
+                navigate="/jelajahi"
+                image="src/assets/img/jelajahi.png"
+                title="Jelajahi"
+              />
+              <SidebarMenu
+                navigate="/question"
+                image="src/assets/img/tanya.png"
+                title="Pertanyaan"
+                isActive={activePage === "Pertanyaan"}
+              />
+              <SidebarMenu
+                navigate="/forum"
+                image="src/assets/img/forum.png"
+                title="Forum"
+              />
+            </div>
           </div>
         </div>
         <div className="pt-6">

@@ -10,15 +10,17 @@ const ForYouPage = () => {
   const followedData = dataQuest.filter((item) => item.status === "Ikuti");
 
   return (
-    <SidebarLayout>
-      <HeaderQuest>
-        <div>
-          {followedData.map((question, index) => (
-            <CardQuest key={index} data={question} />
-          ))}
-        </div>
-      </HeaderQuest>
-    </SidebarLayout>
+    <div>
+      <SidebarLayout>
+        <HeaderQuest>
+          <div>
+            {followedData.map((question, index) => (
+              <CardQuest key={index} data={question} />
+            ))}
+          </div>
+        </HeaderQuest>
+      </SidebarLayout>
+    </div>
   );
 };
 

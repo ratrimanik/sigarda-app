@@ -1,4 +1,4 @@
-import AskLabel from "../../components/AskLabel/askLabel";
+import AskLabel from "../../components/Label/askLabel";
 import Button from "../../components/Button/button";
 import ButtonHandlerFollow from "../../components/Button/handlerfollow";
 import CardPost from "../../components/CardPostDashboard/cardpost";
@@ -23,11 +23,17 @@ const Dashboard = () => {
   return (
     <SidebarLayout>
       <div>
-        <div className="md:bg-[#F2F9FF] bg-white px-2">
+        <div className="md:bg-[#F2F9FF] bg-white mb-32">
           <div className="flex">
             <div>
-              <div className="hidden lg:block">
-              <NavbarPage title="Pertanyaan" />
+              <div>
+                <NavbarPage title="Beranda" />
+                <div className="md:hidden">
+                  <HeaderMobile />
+                  <div className="flex pt-16">
+                    <ButtonHandlerFollow />
+                  </div>
+                </div>
                 <div className="flex justify-between items-center">
                   <div className="flex pt-4 gap-2">
                     <ButtonHandlerFollow />
@@ -52,20 +58,13 @@ const Dashboard = () => {
                 </div>
               </div>
 
-              <div className="md:hidden fixed top-0 left-0 w-full bg-white z-50 justify-between items-center px-8 py-4 shadow-md">
-                <HeaderMobile />
-                <div className="flex pt-4 gap-2">
-                  <ButtonHandlerFollow />
-                </div>
-              </div>
-
               <hr className="border border-[#C1DFF5] my-4 hidden lg:block" />
 
               <div>
                 <div className="hidden lg:block">
                   <AskLabel />
                 </div>
-                <div className="md:mt-0 mt-32">
+                <div className=" ">
                   {filteredData.map((cardData, index) => {
                     if (cardData.status === "Ikuti" && index === 1) {
                       return (
@@ -83,7 +82,7 @@ const Dashboard = () => {
           </div>
           <img
             src="src/assets/img/Ads (1).png"
-            className="w-[690px] h-40 -ml-3"
+            className="w-[690px]  h-40 -ml-3"
           ></img>
         </div>
       </div>

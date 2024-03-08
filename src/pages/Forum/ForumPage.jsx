@@ -4,28 +4,29 @@ import { FaSquarePlus } from "react-icons/fa6";
 import LastSearch from "../../components/PencarianTerakhir/lastSearch";
 import CardForum from "../../components/CardForum/cardForum";
 import NavbarPage from "../../components/HeaderMobile/title";
+import HeaderMobile from "../../fragments/headermobile";
 
 const ForumPage = () => {
   return (
     <SidebarLayout>
-      <div className="w-[660px]">
-        <div className="md:bg-[#F2F9FF] bg-white px-2">
+      <div className="md:w-[660px] mb-36">
+        <div className="md:bg-[#F2F9FF] bg-white md:px-0 px-10">
           <div>
             <NavbarPage title="Forum" />
-
-            <div>
-              <div className="flex gap-4 mt-3">
+            <HeaderMobile />
+            <div className="md:mt-0 mt-20 md:px-0">
+              <div className="flex gap-4 mt-3 w-[730px] md:w-full">
                 <div className="relative mb-4 w-full mr-2">
                   <input
                     type="text"
-                    className="w-full pl-12 h-8 border-white shadow-md text-sm rounded-full focus:outline-none text-black"
+                    className="w-full pl-16 md:pl-12 md:h-8 h-12 border-white shadow-md md:text-sm text-[24px] rounded-full focus:outline-none text-black"
                     placeholder="Cari Forum"
                   />
-                  <IoSearchOutline className="absolute left-6 top-1/2 transform -translate-y-1/2 text-gray-500" />
+                  <IoSearchOutline className="absolute left-6 top-1/2 transform -translate-y-1/2 text-gray-500 md:text-[16px] text-3xl" />
                 </div>
-                <div>
-                  <button className="rounded-lg relative bg-white shadow-xl items-center w-28 h-8">
-                    <FaSquarePlus className="absolute top-1/2 transform -translate-y-1/2 right-1 w-7 h-7 text-primary" />
+                <div className="hidden lg:block">
+                  <button className="rounded-lg relative bg-white shadow-xl items-center w-32 h-8">
+                    <FaSquarePlus className="absolute top-1/2 transform -translate-y-1/2 right-2 w-7 h-7 text-primary" />
                     <p className="-ml-4 mr-4  text-[14px] text-[#9A9A9A]">
                       Buat forum
                     </p>
@@ -33,7 +34,7 @@ const ForumPage = () => {
                 </div>
               </div>
               <div className="bg-white h-full mb-4 px-4 rounded-lg shadow-md">
-                <p className="text-[12px] font-semibold pt-2">
+                <p className="md:text-[12px] text-[28px] md:font-semibold font-bold md:pt-2">
                   Pencarian Terakhir
                 </p>
                 <div className="mt-2">
@@ -45,10 +46,10 @@ const ForumPage = () => {
                 </div>
               </div>
 
-              <p className="text-[12px] font-semibold mb-2">
+              <p className="md:text-[12px] text-[28px] md:pt-0 pt-4 md:font-semibold font-bold mb-2">
                 Forum yang Anda Buat
               </p>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="md:grid md:grid-cols-2 md:gap-4">
                 <CardForum
                   image="src/assets/img/uiux.png"
                   title="UI UX Design"
@@ -62,10 +63,10 @@ const ForumPage = () => {
                   date="1 jam yang lalu"
                 />
               </div>
-              <p className="text-[12px] font-semibold my-2">
+              <p className="md:text-[12px] text-[28px] md:pt-0 pt-4 md:font-semibold font-bold my-2">
                 Forum yang Anda Ikuti
               </p>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="md:grid md:grid-cols-2 md:gap-4">
                 <CardForum
                   image="src/assets/img/iconforum.png"
                   title="Graphic Design"

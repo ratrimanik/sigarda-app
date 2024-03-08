@@ -13,8 +13,8 @@ const JelajahiPage = () => {
 
   return (
     <SidebarLayout>
-      <div className="md:max-w-[650px] w-[800px] px-2">
-        <div className="md:bg-[#F2F9FF] bg-black ">
+      <div className="md:max-w-[650px] w-[820px] mb-32">
+        <div className="md:bg-[#F2F9FF] bg-white pt-2">
           <div>
             <NavbarPage title="Jelajahi" />
             <div>
@@ -43,23 +43,28 @@ const JelajahiPage = () => {
               </div>
             </div>
 
-            <div className="bg-black h-full mb-4 px-4  md:mt-0 mt-32 rounded-md border">
-              <p className="text-[12px] font-semibold pt-2">
-                Pencarian Terakhir
-              </p>
-              <div className="mt-2">
-                <LastSearch title="Design Grafis" />
-                <LastSearch title="UI UX" />
+            <div className="md:px-0 px-8">
+              <div className="bg-white h-full mb-4 px-4  md:mt-0 mt-20 rounded-md shadow-md">
+                <p className="md:text-[12px] text-[28px] md:font-semibold font-bold md:pt-2">
+                  Pencarian Terakhir
+                </p>
+                <div className="md:mt-2 mt-4">
+                  <LastSearch title="Design Grafis" />
+                  <LastSearch title="UI UX" />
+                </div>
               </div>
-            </div>
-            <div className="bg-white h-full mb-4 px-4">
-              <p className="text-primary font-bold text-sm py-2">
-                Tren Topik untuk Anda
-              </p>
-              <JelajahiItem title="Artificial Intelligence" vote="120jt vote" />
-              <JelajahiItem title="Politik Indonesia" vote="100jt vote" />
-              <JelajahiItem title="Pilpres 2024" vote="80jt vote" />
-              <JelajahiItem title="Mahkamah Konstitusi" vote="10jt vote" />
+              <div className="bg-white h-full mb-4 py-2 px-4 shadow-md">
+                <p className="text-primary font-bold md:text-sm text-[28px] pt-2 pb-4">
+                  Tren Topik untuk Anda
+                </p>
+                <JelajahiItem
+                  title="Artificial Intelligence"
+                  vote="120jt vote"
+                />
+                <JelajahiItem title="Politik Indonesia" vote="100jt vote" />
+                <JelajahiItem title="Pilpres 2024" vote="80jt vote" />
+                <JelajahiItem title="Mahkamah Konstitusi" vote="10jt vote" />
+              </div>
             </div>
           </div>
           <div>

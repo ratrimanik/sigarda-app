@@ -4,18 +4,18 @@ import RecomForum from "./rekomendasiForum";
 
 const SiderForum = () => {
   return (
-    <div className="w-64 pl-12">
-      <div className="relative mt-16 flex w-64">
+    <div className="md:w-64 pl-12">
+      <div className="relative md:mt-16 mt-3 flex md:w-64 w-64">
         <button
           type="button"
-          className="w-64 h-8 bg-primary shadow-md rounded-full focus:outline-none text-white"
+          className="w-64 md:h-8 h-12 md:bg-primary shadow-md rounded-full focus:outline-none md:text-white text-primary border border-primary"
         >
-          <p className="text-xs font-bold -ml-16">Undangan Forum</p>
-          <Bs2CircleFill className="absolute right-2 top-1/2 transform -translate-y-1/2 text-[#D63230]" />
+          <p className="md:text-xs text-[24px] whitespace-nowrap font-bold md:-ml-16">Undangan Forum</p>
+          <Bs2CircleFill className="absolute right-2 top-1/2 transform -translate-y-1/2 text-[#D63230] hidden lg:block" />
         </button>
       </div>
 
-      <RecomForum />
+      <RecomForum/>
     </div>
   );
 };

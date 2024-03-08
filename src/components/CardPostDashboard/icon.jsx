@@ -7,8 +7,8 @@ const Icon = (props) => {
 
     return (
         <div className="flex">
-            <img src={image} alt=""  className="w-4 h-4"/>
-            <p className="text-[10px] pl-1 pr-2 text-gray-400 whitespace-nowrap">{title}</p>
+            <img src={image} alt=""  className="md:w-4 md:h-4 w-8 h-8"/>
+            <p className="md:text-[10px] text-2xl pl-1 pr-2 text-gray-400 whitespace-nowrap md:-mt-2">{title}</p>
         </div> 
     )
 }
