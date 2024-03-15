@@ -12,10 +12,35 @@ import ForumPage from './pages/Forum/ForumPage'
 import UnreadPage from './pages/Notifikasi/UnreadPage'
 import JelajahiPage from './pages/Jelajahi/JelajahiPage'
 import NotifikasiPage from './pages/Notifikasi/NotifikasiPage'
+import LoginPage from './pages/Auth/LoginPage'
+import RegisterPage from './pages/Auth/RegisterPage'
+import PasswordPage from './pages/Auth/PasswordPage'
+import VerificationPage from './pages/Auth/VerificationPage'
+import ChangePasswordPage from './pages/Auth/ChangePasswordPage'
 
 const router = createBrowserRouter([
   {
     path: '/',
+    element: <LoginPage />,
+  },
+  {
+    path: '/register',
+    element: <RegisterPage />,
+  },
+  {
+    path: '/password',
+    element: <PasswordPage />
+  },
+  {
+    path: '/verification',
+    element: <VerificationPage />
+  },
+  {
+    path: '/changepassword',
+    element: <ChangePasswordPage />
+  },
+  {
+    path: '/dashboard',
     element: <Dashboard />,
   },
   {

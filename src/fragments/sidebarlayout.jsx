@@ -30,7 +30,7 @@ const SidebarLayout = ({ children }) => {
       <div className="flex">
         <div className="sticky top-0 left-0 z-40 w-64 h-screen">
           <Sidebar
-            className="bg-white dark:bg-gray-800 shadow-lg fixed top-0 left-0 w-52 h-screen z-40 hidden lg:block"
+            className="bg-white  shadow-lg fixed top-0 left-0 w-52 h-screen z-40 hidden lg:block"
             aria-label="Sidebar with logo branding example"
           >
             <div className="pl-2">
