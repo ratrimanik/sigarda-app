@@ -1,9 +1,33 @@
 import { Button, Checkbox, Label, TextInput } from "flowbite-react";
 import { FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ImageAuth from "../../components/Auth/imageauth";
+import { useState } from "react";
 
 const LoginPage = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  async function signIn() {
+    let item = { email, password };
+    let result = await fetch("http://localhost:8000/api/login", {
+      method: "POST",
+      body: JSON.stringify(item),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    if (result.status == 200) {
+      result = await result.json();
+      console.warn("result", result);
+      localStorage.setItem("user-info", JSON.stringify(result));
+      navigate("/dashboard");
+    }else{
+      alert("Login Failed");
+    }
+  }
+
   return (
     <div className="flex w-full min-h-screen">
       <ImageAuth />
@@ -25,6 +49,8 @@ const LoginPage = () => {
                 placeholder="masukkan email anda..."
                 required
                 className="w-[300px]"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div>
@@ -40,6 +66,8 @@ const LoginPage = () => {
                 type="password"
                 required
                 placeholder="masukkan kata sandi anda..."
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
             <div className="flex items-center justify-between gap-2 font-bold text-[14px]">
@@ -53,7 +81,7 @@ const LoginPage = () => {
                 <button className="text-[#2196F3]"><Link to="/password">Lupa sandi</Link></button>
               </div>
             </div>
-            <Button color="blue">Masuk</Button>
+            <Button color="blue" onClick={signIn}>Masuk</Button>
             <div className="justify-center">
               <div className="flex justify-center text-[13px]">
                 <p className="text-[#9A9A9A]">Belum Punya Akun?</p>
