@@ -5,11 +5,11 @@ import { dataScroll } from "./datascroll";
 
 const CardScroll = () => {
   return (
-    <div className="my-4 mx-4 md:mx-0">
+    <div className="my-4 ml-4 mr-8 md:mx-0">
       <p className="font-bold md:text-sm text-[28px]">Rekomendasi Topik</p>
-      <div className=" flex flex-col  h-full my-2 md:max-w-[650px]">
+      <div className=" flex flex-col  h-full my-2 md:max-w-[650px] w-[820px]">
         <div>
-          <div className="overflow-auto scrollbar-hide ">
+          <div className="overflow-auto scrollbar-hide">
             <div className="flex flex-nowrap space-x-4 mb-2">
               {dataScroll.map((cardData, index) => (
                 <Card

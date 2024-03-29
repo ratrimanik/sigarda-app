@@ -35,7 +35,7 @@ const ButtonHandlerQuestion = () => {
           Draft
         </NavLink>
       </div>
-      <div className="md:hidden flex mx-20 gap-16 pt-2 text-gray-400 w-[580px]">
+      <div className="md:hidden flex mx-20 gap-16 pt-2 text-gray-400 w-[630px]">
         <NavLink
           to="/question"
           className={({ isActive }) =>

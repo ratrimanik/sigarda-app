@@ -18,8 +18,9 @@ const Sider = () => {
 
   return (
     <div className="pl-5">
-      <div className="relative mt-16">
-        {isHomePage || isFollowPage ? (
+      <div className="relative mt-16 ">
+        <div>
+          {isHomePage || isFollowPage ? (
           <input
             type="text"
             className="w-60 pl-12 h-8 rounded-full focus:outline-none text-sm border-white shadow-md bg-white"
@@ -35,6 +36,7 @@ const Sider = () => {
         ) : (
           <Bs2CircleFill className="absolute right-12 top-1/2 transform -translate-y-1/2 text-[#D63230]" />
         )}
+        </div>
       </div>
 
       <div className="bg-white border-white shadow-md rounded-lg mt-4 w-60">

@@ -23,7 +23,7 @@ const ButtonHandlerFollow = () => {
           }
           onClick={() => setIsFollowActive(!isFollowActive)}
         >
-          <Link to="/">
+          <Link to="/dashboard">
             <p className="text-xs px-2">Untuk Anda</p>
           </Link>
         </Button>
@@ -51,7 +51,7 @@ const ButtonHandlerFollow = () => {
           }
           onClick={() => setIsFollowActive(!isFollowActive)}
         >
-          <Link to="/">
+          <Link to="/dashboard">
             <p className="font-bold text-3xl -mt-12 px-2">Untuk Anda</p>
           </Link>
         </Button>
