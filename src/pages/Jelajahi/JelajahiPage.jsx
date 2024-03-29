@@ -13,7 +13,7 @@ const JelajahiPage = () => {
 
   return (
     <SidebarLayout>
-      <div className="md:max-w-[650px] w-[820px] mb-32">
+      <div className="md:max-w-[650px] w-[868px] mb-32">
         <div className="md:bg-[#F2F9FF] bg-white pt-2">
           <div>
             <NavbarPage title="Jelajahi" />

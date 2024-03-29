@@ -9,7 +9,7 @@ import HeaderMobile from "../../fragments/headermobile";
 const ForumPage = () => {
   return (
     <SidebarLayout>
-      <div className="md:w-[660px] mb-36">
+      <div className="md:w-[650px] w-[868px] mb-36">
         <div className="md:bg-[#F2F9FF] bg-white md:px-0 px-10">
           <div>
             <NavbarPage title="Forum" />

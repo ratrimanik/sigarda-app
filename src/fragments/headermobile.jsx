@@ -11,7 +11,7 @@ const HeaderMobile = () => {
   const isQuestionPage = location.pathname === "/question";
   const isForYouPage = location.pathname === "/foryou";
   const isDrafPage = location.pathname === "/draf";
-  const isDashboardPage = location.pathname === "/";
+  const isDashboardPage = location.pathname === "/dashboard";
   const isFollowPage = location.pathname === "/follow";
   const isNotifikasiPage = location.pathname === "/notif";
 
@@ -52,11 +52,11 @@ const HeaderMobile = () => {
               </div>
             </div>
           ) : isDashboardPage || isFollowPage ? (
-            <div className="flex gap-48 mr-4 mt-3">
+            <div className="flex gap-60 mr-4 ">
               <img
                 src="/src/assets/img/logo-sigarda.png"
                 alt="Logo"
-                className="w-48 h-10 mt-2"
+                className="w-48 h-14 mt-2"
               />
               <SidebarMenu navigate="/notif" image="src/assets/img/notif.png" />
             </div>

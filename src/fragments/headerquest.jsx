@@ -9,7 +9,7 @@ const HeaderQuest = (props) => {
   const { children } = props;
 
   return (
-    <div className="md:bg-[#F2F9FF] bg-white px-2">
+    <div className="md:bg-[#F2F9FF] bg-white ">
       <div className="flex">
         <div className="pr-7">
           <NavbarPage title="Pertanyaan" />

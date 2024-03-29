@@ -23,7 +23,7 @@ const Dashboard = () => {
   return (
     <SidebarLayout>
       <div>
-        <div className="md:bg-[#F2F9FF] bg-white w-[810px] md:max-w-[680px]">
+        <div className="md:bg-[#F2F9FF] bg-white w-[860px] md:max-w-[680px]">
           <div className="flex">
             <div>
               <div>

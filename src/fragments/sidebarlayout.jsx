@@ -44,7 +44,7 @@ const SidebarLayout = ({ children }) => {
                   </Sidebar.Item>
                   {/* Sidebar in Website */}
                   <SidebarMenu
-                    navigate="/"
+                    navigate="/dashboard"
                     image="src/assets/img/beranda.png"
                     title="Beranda"
                   />
@@ -85,12 +85,12 @@ const SidebarLayout = ({ children }) => {
               </Sidebar.Items>
             </div>
           </Sidebar>
-          <div className="md:hidden flex justify-center fixed left-0 bottom-0  w-full bg-white gap-20 text-3xl z-50">
+          <div className="md:hidden ">
             {" "}
             {/* Bottom Navigation in Mobile */}
-            <div className="flex justify-center fixed left-0 bottom-0 py-4 w-full bg-white gap-20 text-3xl z-50">
+            <div className="flex justify-center fixed left-0 bottom-0  py-4 w-full bg-white gap-16  z-50">
               <SidebarMenu
-                navigate="/"
+                navigate="/dashboard"
                 image="src/assets/img/beranda.png"
                 title="Beranda"
               />
